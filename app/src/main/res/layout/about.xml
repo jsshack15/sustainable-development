@@ -2,37 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:weightSum="50">
+    android:weightSum="100"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="10">
     <ScrollView
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fillViewport="false"
-        android:clickable="true">
+        android:clickable="true"
+        >
 
 
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
 
 
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
+        android:textSize="25dp"
         android:text="Sustainable development (SD) is a process for meeting human development goals while maintaining the ability of natural systems to continue to provide the natural resources and ecosystem services upon which the economy and society depend. While the modern concept of sustainable development is derived most strongly from the 1987 Brundtland Report, it is rooted in earlier ideas about sustainable forest management and twentieth century environmental concerns  Sustainable development is the organizing principle for sustaining finite resources necessary to provide for the needs of future generations of life on the planet. It is a process that envisions a desirable future state for human societies in which living conditions and resource-use continue to meet human needs without undermining the &quot;integrity, stability and beauty&quot; of natural biotic systems." />
     </LinearLayout>
     </ScrollView>
-
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="90">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
         android:id="@+id/button9"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="80"
+        />
+</LinearLayout>
 </LinearLayout>
