@@ -14,13 +14,14 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StartingPoint extends Activity /*implements View.OnClickListener */ {
+public class StartingPoint extends Activity implements View.OnClickListener {
     Button b;
+    Intent in;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.starting);
+        setContentView(R.layout.content_starting_point);
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,21 +33,28 @@ public class StartingPoint extends Activity /*implements View.OnClickListener */
                         .setAction("Action", null).show();
             }
         });*/
-        b = (Button) findViewById(R.id.button10);
+        b = (Button)findViewById(R.id.button);
 
-        b.setOnClickListener(new View.OnClickListener() {
+        b.setOnClickListener(this);
+    }
 
+@Override
             public void onClick(View v) {
-                Intent intent;
-                intent = new Intent(StartingPoint.this, MenuList.class);
-                startActivity(intent);
-            }
-        });
+
+        Class ch = null;
+        try {
+            ch = Class.forName("com.example.myhp.sustain.MenuList");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        in = new Intent(StartingPoint.this, ch);
+        startActivity(in);
+    }
 
     }
 
 
-}
+
 
 
 
