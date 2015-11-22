@@ -11,16 +11,22 @@ import android.widget.Button;
  * Created by my hp on 11/21/2015.
  */
 public class MenuList extends Activity implements View.OnClickListener {
-    Button frwd;
+    Button abt,ht,nu,wm;
     Intent in;
-
+/*<!uses-permission android:name="android.permission.INTERNET"/>
+    <!uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_list);
-        frwd = (Button) findViewById(R.id.button2);
-        frwd.setOnClickListener(this);
-
+        setContentView(R.layout.menunew);
+        abt = (Button) findViewById(R.id.button2);
+        ht=(Button)findViewById(R.id.button5);
+        wm=(Button)findViewById(R.id.button3);
+        nu=(Button)findViewById(R.id.button6);
+        abt.setOnClickListener(this);
+        ht.setOnClickListener(this);
+        nu.setOnClickListener(this);
+        wm.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +42,47 @@ public class MenuList extends Activity implements View.OnClickListener {
                 in = new Intent(MenuList.this, ch);
                  this.startActivity(in);
                 break;
+
+            case (R.id.button5):
+                Class ch1 = null;
+                try {
+                    ch1 = Class.forName("com.example.myhp.sustain.Form");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                in = new Intent(MenuList.this, ch1);
+                startActivity(in);
+                break;
+            case (R.id.button6):
+                Class ch2 = null;
+                try {
+                    ch2 = Class.forName("com.example.myhp.sustain.Web");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                in = new Intent(MenuList.this, ch2);
+                startActivity(in);
+                break;
+            case (R.id.button3):
+                Class ch3 = null;
+                try {
+                    ch3 = Class.forName("com.example.myhp.sustain.Waste");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                in = new Intent(MenuList.this, ch3);
+                startActivity(in);
+                break;
+
+
         }
+
+
+
+
+
+
     }
+
+
 }
