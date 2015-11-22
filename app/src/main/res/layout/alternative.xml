@@ -17,28 +17,29 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical"
+                android:orientation="vertical">
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editText2"
                     android:textSize="25dp"
-            android:text=" "
-            "></TextView>
+            android:text=" Issues:
+1) Poverty
+2) Population
+3) Pollution
+4) Illiteracy
+5) Inequalities based on sex, caste and creed.
+6) Global Warming  and Greenhouse Gasses
+
+
+                 Major Alternatives:
+
+1)PAPER,cloth,jute better over Plastic bags, synthetics, plastic bottles, tin cans.
+
+2)Cotton for a new shirt better from a chemistry standpoint over nylon 6 and that it’s more desirable from a waste standpoint than hemp.
+
+3) Either linen or lyocell would make more sense when it comes to water conservation rather than cotton. "></TextView>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="90">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:id="@+id/button9"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="80"
-            />
     </LinearLayout>
-</LinearLayout>

@@ -11,7 +11,7 @@ import android.widget.Button;
  * Created by my hp on 11/21/2015.
  */
 public class MenuList extends Activity implements View.OnClickListener {
-    Button abt,ht,nu,wm;
+    Button abt,ht,nu,wm,alter,gogreen;
     Intent in;
 /*<!uses-permission android:name="android.permission.INTERNET"/>
     <!uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>*/
@@ -23,10 +23,14 @@ public class MenuList extends Activity implements View.OnClickListener {
         ht=(Button)findViewById(R.id.button5);
         wm=(Button)findViewById(R.id.button3);
         nu=(Button)findViewById(R.id.button6);
+        alter=(Button)findViewById(R.id.button7);
+        gogreen=(Button)findViewById(R.id.button8);
         abt.setOnClickListener(this);
         ht.setOnClickListener(this);
         nu.setOnClickListener(this);
         wm.setOnClickListener(this);
+        alter.setOnClickListener(this);
+        gogreen.setOnClickListener(this);
     }
 
     @Override
@@ -73,7 +77,26 @@ public class MenuList extends Activity implements View.OnClickListener {
                 in = new Intent(MenuList.this, ch3);
                 startActivity(in);
                 break;
-
+            case(R.id.button7):
+                Class ch4 = null;
+                try {
+                    ch4 = Class.forName("com.example.myhp.sustain.Alter");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                in = new Intent(MenuList.this, ch4);
+                startActivity(in);
+                break;
+            case(R.id.button8):
+                Class ch5 = null;
+                try {
+                    ch5 = Class.forName("com.example.myhp.sustain.Green");
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                in = new Intent(MenuList.this, ch5);
+                startActivity(in);
+                break;
 
         }
 
